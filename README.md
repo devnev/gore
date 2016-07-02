@@ -4,6 +4,11 @@ Written out of annoyance with the many different regexp syntaxes and escaping re
 
 Intended to cover the most common use-cases without any magical flags.
 
+## Install
+
+* Install Go
+* `go get github.com/devnev/gore`
+
 ## Commands
 
 All commands traverse directories recursively.
