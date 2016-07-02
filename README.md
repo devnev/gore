@@ -7,7 +7,7 @@ Intended to cover the most common use-cases without any magical flags.
 ## Install
 
 * Install Go
-* `go get github.com/devnev/gore`
+* `go get nevill.io/gore`
 
 ## Commands
 

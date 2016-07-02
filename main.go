@@ -4,7 +4,7 @@
 package main
 
 import (
-	"github.com/devnev/gore/cmd"
+	"nevill.io/gore/cmd"
 )
 
 func main() {
