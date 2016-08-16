@@ -29,8 +29,8 @@ func runSearch(paths []string, pattern *regexp.Regexp) error {
 }
 
 var searchCmd = &cobra.Command{
-	Use:     "search <pattern> <files and directories...>",
-	Short:   "list files with lines matching the pattern.",
+	Use:   "search <pattern> <files and directories...>",
+	Short: "list files with lines matching the pattern.",
 	RunE: func(cmd *cobra.Command, args []string) error {
 		if len(args) < 1 {
 			return cmd.Usage()
