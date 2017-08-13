@@ -18,6 +18,12 @@ var fVerbose = pflag.BoolP("verbose", "v", false, "print additional information"
 func walkReplace(replacer func(in []byte) []byte, paths ...string) error {
 	for _, path := range paths {
 		err := filepath.Walk(path, func(path string, info os.FileInfo, err error) error {
+			if err != nil {
+				if *fVerbose {
+					log.Printf("Error stating %v: %v", path, err.Error())
+				}
+				return nil
+			}
 			if info.IsDir() {
 				return nil
 			}
@@ -50,6 +56,12 @@ func walkReplace(replacer func(in []byte) []byte, paths ...string) error {
 func walkRead(reader func(path string, in []byte), paths ...string) error {
 	for _, path := range paths {
 		err := filepath.Walk(path, func(path string, info os.FileInfo, err error) error {
+			if err != nil {
+				if *fVerbose {
+					log.Printf("Error stating %v: %v", path, err.Error())
+				}
+				return nil
+			}
 			if info.IsDir() {
 				return nil
 			}
